@@ -51,9 +51,7 @@ public class MultiMongoCollectionSplitter extends MongoSplitter {
         //splitter for each implementation.
         if (inputURIs.size() > 0) {
             if (LOG.isDebugEnabled()) {
-                LOG.debug(
-                  "Using global split settings for multiple URIs " +
-                    "specified.");
+                LOG.debug("Using global split settings for multiple URIs specified.");
             }
             //Get options from the hadoop config.
             //Use these options for all URIs in the list.
@@ -74,8 +72,8 @@ public class MultiMongoCollectionSplitter extends MongoSplitter {
             //Otherwise the user has set options per-collection.
             if (LOG.isDebugEnabled()) {
                 LOG.debug(
-                  "Loading multiple input URIs from JSON stored in " +
-                    MULTI_COLLECTION_CONF_KEY);
+                  "Loading multiple input URIs from JSON stored in "
+                  + MULTI_COLLECTION_CONF_KEY);
             }
             DBObject multiUriConfig = MongoConfigUtil.getDBObject(this.getConfiguration(), MULTI_COLLECTION_CONF_KEY);
 
@@ -106,8 +104,8 @@ public class MultiMongoCollectionSplitter extends MongoSplitter {
                     if (LOG.isDebugEnabled()) {
                         LOG.debug(
                           String.format(
-                            "Using custom Splitter class for namespace: %s.%s; " +
-                              "hosts: %s",
+                            "Using custom Splitter class for namespace: %s.%s; "
+                            + "hosts: %s",
                             inputURI.getDatabase(), inputURI.getCollection(),
                             inputURI.getHosts()));
                     }
@@ -128,8 +126,8 @@ public class MultiMongoCollectionSplitter extends MongoSplitter {
                     if (LOG.isDebugEnabled()) {
                         LOG.debug(
                           String.format(
-                            "Fetching collection stats on namespace: %s.%s; " +
-                              "hosts: %s to choose splitter implementation.",
+                            "Fetching collection stats on namespace: %s.%s; "
+                            + "hosts: %s to choose splitter implementation.",
                             inputURI.getDatabase(), inputURI.getCollection(),
                             inputURI.getHosts()));
                     }

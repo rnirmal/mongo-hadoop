@@ -52,8 +52,8 @@ public class SingleMongoSplitter extends MongoCollectionSplitter {
         if (LOG.isDebugEnabled()) {
             LOG.debug(
               String.format(
-                "SingleMongoSplitter calculating splits for namespace: %s.%s; " +
-                  "hosts: %s",
+                "SingleMongoSplitter calculating splits for namespace: %s.%s; "
+                + "hosts: %s",
                 inputURI.getDatabase(), inputURI.getCollection(),
                 inputURI.getHosts()));
         }
